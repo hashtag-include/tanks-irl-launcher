@@ -81,7 +81,7 @@ void dispense()
 void tiltUp()
 {
   if(tiltServoCurrentAngle > tiltServoMaxAngle) {
-    tiltServoCurrentAngle -= 5;
+    tiltServoCurrentAngle -= 2;
     tiltServo.write(tiltServoCurrentAngle);
   }
   Serial.println(tiltServoCurrentAngle);
@@ -90,7 +90,7 @@ void tiltUp()
 void tiltDown()
 {
   if(tiltServoCurrentAngle < tiltServoDefaultAngle) {
-    tiltServoCurrentAngle += 5;
+    tiltServoCurrentAngle += 2;
     tiltServo.write(tiltServoCurrentAngle);
   }
   Serial.println(tiltServoCurrentAngle);
